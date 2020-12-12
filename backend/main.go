@@ -5,12 +5,11 @@ import (
 )
 
 func main() {
-	mux := http.NewServeMux()
-	mux.Handle("/", http.HandlerFunc(hello))
+	http.HandleFunc("/", hello)
 
 	s := http.Server{
 		Addr:    ":3000",
-		Handler: mux,
+		Handler: http.DefaultServeMux,
 	}
 	s.ListenAndServe()
 }
