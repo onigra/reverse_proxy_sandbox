@@ -6,8 +6,7 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
-	handler := new(HelloHandler)
-	mux.Handle("/", handler)
+	mux.Handle("/", http.HandlerFunc(hello))
 
 	s := http.Server{
 		Addr:    ":3000",
@@ -16,8 +15,6 @@ func main() {
 	s.ListenAndServe()
 }
 
-type HelloHandler struct{}
-
-func (h *HelloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func hello(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Hello World"))
 }
