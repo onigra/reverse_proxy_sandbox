@@ -6,12 +6,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", hello)
-
-	s := http.Server{
-		Addr:    ":3000",
-		Handler: http.DefaultServeMux,
-	}
-	s.ListenAndServe()
+	http.ListenAndServe(":3000", nil)
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
