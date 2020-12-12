@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 )
 
@@ -10,5 +11,6 @@ func main() {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.Method, r.URL)
 	w.Write([]byte("Hello World"))
 }
