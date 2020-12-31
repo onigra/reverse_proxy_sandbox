@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Add hosts
-        run: make add-hosts
+        run: sudo make add-hosts
 
       - name: Start servers
         run: make upd
