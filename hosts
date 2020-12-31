@@ -1,0 +1,5 @@
+# Added by reverse_proxy_sandbox
+127.0.0.1 web1.nginx.internal
+127.0.0.1 web2.nginx.internal
+127.0.0.1 web3.nginx.internal
+# End of Section reverse_proxy_sandbox

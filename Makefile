@@ -7,3 +7,6 @@ down:
 clean:
 	@make down
 	docker-compose rm
+
+add-hosts:
+	cat ./hosts >> /etc/hosts
