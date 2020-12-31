@@ -13,3 +13,6 @@ clean:
 
 add-hosts:
 	cat ./hosts >> /etc/hosts
+
+test:
+	go test -race ./...
