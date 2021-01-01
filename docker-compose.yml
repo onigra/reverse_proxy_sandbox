@@ -11,12 +11,12 @@ services:
 
   web1:
     image: ghcr.io/onigra/wasataro:latest
-    command: ./wasataro -response=web1
+    command: -response=web1
 
   web2:
     image: ghcr.io/onigra/wasataro:latest
-    command: ./wasataro -response=web2
+    command: -response=web2
 
   web3:
     image: ghcr.io/onigra/wasataro:latest
-    command: ./wasataro -response=web3
+    command: -response=web3
